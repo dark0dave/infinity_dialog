@@ -27,7 +27,7 @@ func NewDirectoryPicker(dir bool, message string) DirectoryPicker {
 	fp.DirAllowed = dir
 	fp.FileAllowed = !dir
 	h, _ := docStyle.GetFrameSize()
-	fp.Height = height - h - 5
+	fp.SetHeight(height - h - 5)
 	fp.AutoHeight = true
 	fp.ShowHidden = false
 	return DirectoryPicker{
@@ -56,7 +56,7 @@ func (d DirectoryPicker) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		return d, d.Init()
 	case tea.WindowSizeMsg:
 		h, _ := docStyle.GetFrameSize()
-		d.filepicker.Height -= h
+		d.filepicker.SetHeight(h)
 	case tea.KeyMsg:
 		switch msg.String() {
 		case "e":

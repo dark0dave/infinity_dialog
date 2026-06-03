@@ -40,3 +40,6 @@ infinity_dialog*
 # Log files
 debug.log
 __debug*
+.go/
+.direnv/
+.hk/
