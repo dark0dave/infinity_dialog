@@ -76,7 +76,7 @@ jobs:
           set-safe-directory: true
       - name: Create Release
         id: create_release
-        uses: ncipollo/release-action@v1.18.0
+        uses: ncipollo/release-action@v1.20.0
         with:
           generateReleaseNotes: true
   release-artifacts:
